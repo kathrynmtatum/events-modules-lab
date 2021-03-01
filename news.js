@@ -3,6 +3,12 @@ export default function renderNews(news){
     return `
       <section id="news">
       <div class="row">
+       <div class="col-6">
+        <img src = "https://cdn.glitch.com/ab621e97-0054-4a80-9f77-cec959e02051%2FIMG_2691.jpg?v=1612410871596" class="news1" width="360" height="360">
+      </div>
+      <div class="col-4">
+        <img src = "https://cdn.glitch.com/ab621e97-0054-4a80-9f77-cec959e02051%2F1428FE5E-E13B-4AF9-8F1C-1BC44D766323.jpg?v=1612410847923" alt="photo" class="news1" width="360" height="360">
+      </div>
         <div class="col-4">
           <div class="search">
             <br /><input type="search" name='news' placeholder="Search News...">

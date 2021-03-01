@@ -2,6 +2,7 @@ export default function renderProjects(projects){
     console.log(projects, "Projects")
     return `
     <section id="projects">
+    <h1 class="animate__animated animate__infinite animate__rubberBand animate__delay-2s">Projects</h1>
     <div class="row">
       <div class="col-8">
       
@@ -19,32 +20,12 @@ export default function renderProjects(projects){
             Mobile App
 	        </label>
         </div>
-        
-        <br />
-        <br />
-        <span class="highlight">${(projects.title1)}</span>
-        <br />
-        <br /><a href="passionpage.html">Visit the project page here!</a></li>
-        <br />
-      </div>
-      <div class="col-4">
-        <br /> <img src = ${(projects.photo1)} class="passionpic" width="100%" height="100%"><br />
-        <br />
-      </div>
-      <div class="col-4">
-        <br />
-      </div>
-      <div class="col-8">
-        <br /><span class="highlight2">${(projects.title2)}</span><br />
-        <br />
-        <br /><a href="habitpage.html">Visit the project page here!</a></li>
-        <br />
-      </div>
-      <div class="col-4">
-        <br /><img src = "https://cdn.glitch.com/ab621e97-0054-4a80-9f77-cec959e02051%2FImage%204-17-20%20at%2011.05%20PM.jpg?v=1612411325418" class="swift" width="280" height="500"><br />
-      </div>
-    </div>
-    </projects>
+        <div class="project-list">
+          <div class="row">
+            ${renderProjectItems(projects)}
+          </div>
+        </div>
+    </section>
     `
 }
 
@@ -82,39 +63,21 @@ export function renderProjectItems(projects) {
         <div class="project-title">
           <a href="?project=${d.id}"><strong>${d.title}</strong></a>
         </div>
+        <div class="tag-flex-container tags">
+          ${renderTags(d)}
+        </div>
         </br> 
-        <img src="${d.teaser}" width="500px">
+        <img src="${d.photo}" width="500px">
         <br>
-       ${renderMaterials(d.materials)}
         <p> "${d.description}" </p>  
-        <section class = "tags">
-        ${renderTags(d.tags)}
-        <br>
-        </section>
 		</div>`
     )
     .join("\n");
 }
 
-function renderMaterials(materials) {
-  if (materials != undefined) {
-    return materials.map(
-      m =>
-        `<a href='${m.path}'><i class='${m.icon}'></i></a>
-<a href='${m.path}'>${m.label}</a>`
-    );
-  }
-  return "";
-}
 
-function renderTags(tags) {
-  return tags
-    .map(
-      d => `
-  <div class ="${d.category}">
-  ${d.tag}
-</div>
-  `
-    )
-    .join("");
-}
+export function renderTags(projects) {
+    return projects.tags.map(d => `
+    ${d}
+    `).join('');
+  }
