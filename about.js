@@ -4,6 +4,7 @@ export default function renderAbout(about){
       <section id="about">
       <div class="row">
         <div class="col-4">
+        <br /><br /><br />
         <img src = ${about.photo} class="profilepic" alt="photo" width="100%" height="100%">
         <p>
         ${about.name}

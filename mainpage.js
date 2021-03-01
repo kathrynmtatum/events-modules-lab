@@ -1,7 +1,7 @@
 import about from './about.js';
 import navbar from './navbar.js';
 import news,{handleNews} from './news.js';
-import projects,{projectfilter} from './projects.js';
+import projects,{handleProjectFilter} from './projects.js';
 
 
 export default function mainpage(data) {

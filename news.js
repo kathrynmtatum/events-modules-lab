@@ -3,18 +3,20 @@ export default function renderNews(news){
     return `
       <section id="news">
       <div class="row">
-        <div class="col-12">
+        <div class="col-4">
           <div class="search">
-            <input type="search" name='news' placeholder="Search News...">
+            <br /><input type="search" name='news' placeholder="Search News...">
+            <br />
           </div>
         </div>
         <div class="col-4">
         </div>
-        <div class="col-4">
-        </div>
+      <div class="col-8">        
         <div class = "news_items">
-           ${renderNewsItems(news.slice(0, 5))}
-       <div>
+          <br />
+           ${renderNewsItems(news.slice(0, 7))}
+        </div>
+       </div>
       </div>
       </section>
     `;

@@ -8,11 +8,26 @@
 	},
   
 	"news":[ {
-    "date": "August 2020",
-    "content": "Content1"
+    "date": "Fall 2019",
+    "content": "I studied abroad in Prague! It was perfect timing right before coronavirus shut down the world"
   },{
-    "date": "date2",
-    "content": "content2"
+    "date": "June-July 2020",
+    "content": "I interned for a tech consulting firm called CapTech during summer 2020. My role was a business analyst and a SCRUM master"
+  },{
+    "date": "August 2020",
+    "content": "I was offered a full-time position with CapTech as a management consultant after graduation and I accepted it!"
+  },{
+    "date": "Fall 2020",
+    "content": "I started my senior year at Boston College"
+  }, {
+    "date": "Fall 2020",
+    "content": "Teaching assistant to Belle Liang in the Applied Psychology Practicum course"
+  }, {
+    "date": "Fall and Spring 2020",
+    "content": "Planned events and meetings for two clubs: Girls Who Code and Active Minds"
+  }, {
+    "date": "Spring 2020",
+    "content": "Selected to lead and lgbtq+ retreat at BC that will occur in April 2020"
   }],
   
   

@@ -1,7 +1,7 @@
 import mainpage from './mainpage.js';
 import { handleNews } from './news.js';
-//import ProjectPage from './projectpage.js';
-//import {handleProjectFilter} from './projects.js';
+import ProjectPage from './projectpage.js';
+import {handleProjectFilter} from './projects.js';
 
 fetch('./data.json')
 .then(response => {
