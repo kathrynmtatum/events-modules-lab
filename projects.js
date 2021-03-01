@@ -4,27 +4,41 @@ export default function renderProjects(projects){
     <section id="projects">
     <div class="row">
       <div class="col-8">
+      
+        <div class="filter">
+	        <label>
+	          <input type="radio" name="filter" value="all" checked>
+            All
+          </label>
+	        <label>
+	          <input type="radio" name="filter" value="website">
+            Website
+	        </label>
+          <label>
+	          <input type="radio" name="filter" value="mobile app">
+            Mobile App
+	        </label>
+        </div>
+        
+        <br />
+        <br />
         <span class="highlight">${(projects.title1)}</span>
         <br />
-        <br />${(projects.description1)}
+        <br /><a href="passionpage.html">Visit the project page here!</a></li>
+        <br />
       </div>
       <div class="col-4">
         <br /> <img src = ${(projects.photo1)} class="passionpic" width="100%" height="100%"><br />
         <br />
       </div>
-      <div class="col-6">
-        <br />${(projects.words)}<br />
-        <br />${(projects.experiences)}<br />
-        <br />
-        <span class="linkedsite">Visit the Passion Brainstorm site <a href="https://passionbrainstorm.glitch.me/">here!</a></span>
-      </div>
       <div class="col-4">
         <br />
-        <br /> <img src = ${(projects.wordmap)} class="wordmap" width="100%" height="100%"><br />
       </div>
-      <div class="col-4">
+      <div class="col-8">
         <br /><span class="highlight2">${(projects.title2)}</span><br />
-        <br />${(projects.description2)}<br />
+        <br />
+        <br /><a href="habitpage.html">Visit the project page here!</a></li>
+        <br />
       </div>
       <div class="col-4">
         <br /><img src = "https://cdn.glitch.com/ab621e97-0054-4a80-9f77-cec959e02051%2FImage%204-17-20%20at%2011.05%20PM.jpg?v=1612411325418" class="swift" width="280" height="500"><br />
@@ -35,33 +49,7 @@ export default function renderProjects(projects){
 }
 
 
-Export function handleProjectFilter(data){
-  let buttons = document.querySelectorAll('.filter_tags input[name="filter"]');
-  buttons.forEach(cond =>
-    cond.addEventListener("change", function(event) {
-      if (this.value === "all") {
-        return (document.querySelector(
-          ".project-list"
-        ).innerHTML = `<div class="row">
-            ${renderProjectItems(data.projects)}
-            </div>`);
-      }
-      const choice = this.value;
-      const filtered = data.projects.filter(m => {
-        let x = m.stringtags.toString();
-        console.log(x.includes(this.value));
-        return x.includes(this.value);
-      });
-      document.querySelector(".project-list").innerHTML = renderProjectItems(
-        filtered
-      );
-    })
-  );
-}
-
-projects.js
-
-Export function handleProjectFilter(data){
+export function handleProjectFilter(data){
   let buttons = document.querySelectorAll('.filter_tags input[name="filter"]');
   buttons.forEach(cond =>
     cond.addEventListener("change", function(event) {
@@ -86,7 +74,7 @@ Export function handleProjectFilter(data){
 }
 
 
-function renderProjectItems(projects) {
+export function renderProjectItems(projects) {
   return projects
     .map(
       d => `
@@ -129,29 +117,4 @@ function renderTags(tags) {
   `
     )
     .join("");
-}
-
-
-
-
-projectpage.js
-import renderNavbar from './navBar.js'
-import {renderMaterials,renderTags} from './Projects.js'
-
-export default function renderProjectPage(project) {
-  document.querySelector(".container").innerHTML = `
-  ${renderNavbar("project", Object.keys(project))}
-  <div id = ${project.id}>
-  <h1>${project.title}</h1>
-  </br> 
-  <img src="${project.teaser}" width="500px">
-  <br>
-  ${renderMaterials(project.materials)}
-  <p> "${project.explanation}" </p>  
-  <section class = "tags">
-  ${renderTags(project.tags)}
-  <br>
-  </section>
-  </div>
-  `;
 }

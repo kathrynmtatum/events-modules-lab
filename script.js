@@ -155,25 +155,20 @@ fetch("data.json").then(response => {
       <div class="col-8">
         <span class="highlight">${(projects.title1)}</span>
         <br />
-        <br />${(projects.description1)}
       </div>
       <div class="col-4">
         <br /> <img src = ${(projects.photo1)} class="passionpic" width="100%" height="100%"><br />
         <br />
       </div>
       <div class="col-6">
-        <br />${(projects.words)}<br />
-        <br />${(projects.experiences)}<br />
         <br />
-        <span class="linkedsite">Visit the Passion Brainstorm site <a href="https://passionbrainstorm.glitch.me/">here!</a></span>
+        <br />
       </div>
       <div class="col-4">
         <br />
         <br /> <img src = ${(projects.wordmap)} class="wordmap" width="100%" height="100%"><br />
       </div>
       <div class="col-4">
-        <br /><span class="highlight2">${(projects.title2)}</span><br />
-        <br />${(projects.description2)}<br />
       </div>
       <div class="col-4">
         <br /><img src = "https://cdn.glitch.com/ab621e97-0054-4a80-9f77-cec959e02051%2FImage%204-17-20%20at%2011.05%20PM.jpg?v=1612411325418" class="swift" width="280" height="500"><br />
