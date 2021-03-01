@@ -1,9 +1,9 @@
 import renderNavbar from './navbar.js'
-import {renderTags} from './projects.js'
+//import {renderTags} from './projects.js'
 
 
-//${renderMaterials(projects.materials)}
-//${renderTags(project.tags)}
+//  ${renderTags(project.tags)}
+
 
 export default function renderProjectPage(project) {
   document.querySelector(".container").innerHTML = `

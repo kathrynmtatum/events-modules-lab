@@ -2,9 +2,11 @@ export default function renderAbout(about){
     console.log(about, "About");
     return `
       <section id="about">
+      <br /><br />
+      <h1 class="animate__animated animate__infinite animate__swing animate__delay-2s">Kathryn Tatum</h1>
       <div class="row">
         <div class="col-4">
-        <br /><br /><br />
+        <br />
         <img src = ${about.photo} class="profilepic" alt="photo" width="100%" height="100%">
         <p>
         ${about.name}

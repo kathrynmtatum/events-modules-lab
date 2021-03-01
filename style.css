@@ -51,6 +51,10 @@ a:hover {
   margin: 1;
 }
 
+.app {
+  border-radius: 20px;
+}
+
 .swift {
   border-radius: 20px;
 }

@@ -34,6 +34,8 @@
 	"projects":[{
       "title": "Project 1: Passion Brainstorm",
       "id": "passion",
+      "link": "passionpage.html",
+      "projectpage": "Visit the project page here!",
       "label": "Visit the Passion Brainstorm site here!",
       "path": "https://passionbrainstorm.glitch.me/",
       "description": "I created the Passion Brainstorm site as my final project for the Design Thinking & Strategy class at Boston College. For the project, we had to address a problem that students on BC's campus face and I chose the problemof seniors facing the big question - What do I want to do after graduation?. It is a question that makes everyone I know stressed. I wanted to develop a solution that could help students think through their pasions and make it easier for them to answer this big question.",
@@ -45,6 +47,8 @@
   }, {
     "title":"2. Habit Tracker",
     "id": "habit",
+    "projectpage": "Visit the project page here!",
+    "link": "habitpage.html",
     "photo": "https://cdn.glitch.com/ab621e97-0054-4a80-9f77-cec959e02051%2FImage%204-17-20%20at%2011.05%20PM.jpg?v=1612411325418",
     "description": "Another project I developed was an iOS app using Swift. This was my final project for the Swift/iOS class at Boston College and it's called The Habit Tracker. The app allows you to add different habits you are trying to create in your life and will remind you each day to complete those habits. You can add, remove, edit and organize your habits within the app. You can also search for habit inspirations.",
     "tags": "mobile app"

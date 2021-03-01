@@ -13,5 +13,5 @@ document.querySelector('.container').innerHTML = `
         ${projects(data.projects)}
     `
     handleNews(data);
-    //handleProjectFilter(data);
+    handleProjectFilter(data);
 }

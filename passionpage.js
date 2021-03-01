@@ -21,12 +21,20 @@ function renderMainPage(data) {
 
 function renderProjects(projects){
     console.log(projects, "Projects")
-    return `
+    return projects.map(d => `
+      <div>
+        <div>
+          <br /><br />
+          <span class="highlight">${d.title}</strong></a>
+          
+    }
+  
+  /*
     <div class="row">
   <div class="col-8">
-    <span class="highlight">${(projects.title1)}</span>
+    <span class="highlight">${(projects.title)}</span>
     <br />
-    <br />${(projects.description1)}
+    <br />${(projects.description)}
   </div>
     <div class="col-4">
     <br /> 
@@ -45,5 +53,3 @@ function renderProjects(projects){
     <br> <img src = "https://cdn.glitch.com/ab621e97-0054-4a80-9f77-cec959e02051%2F2021-02-07%20(1).png?v=1612732845824" class="wordmap" width="100%" height="100%">
   </div>
   </div>
-    `
-}

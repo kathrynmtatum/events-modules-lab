@@ -2,6 +2,7 @@ export default function renderNews(news){
     console.log(news, "News");
     return `
       <section id="news">
+      <h1 class="animate__animated animate__infinite animate__pulse animate__delay-2s">News About Kathryn</h1>
       <div class="row">
        <div class="col-6">
         <img src = "https://cdn.glitch.com/ab621e97-0054-4a80-9f77-cec959e02051%2FIMG_2691.jpg?v=1612410871596" class="news1" width="360" height="360">

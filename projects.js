@@ -30,54 +30,50 @@ export default function renderProjects(projects){
 }
 
 
-export function handleProjectFilter(data){
-  let buttons = document.querySelectorAll('.filter_tags input[name="filter"]');
-  buttons.forEach(cond =>
-    cond.addEventListener("change", function(event) {
-      if (this.value === "all") {
-        return (document.querySelector(
-          ".project-list"
-        ).innerHTML = `<div class="row">
-            ${renderProjectItems(data.projects)}
-            </div>`);
-      }
-      const choice = this.value;
-      const filtered = data.projects.filter(m => {
-        let x = m.stringtags.toString();
-        console.log(x.includes(this.value));
-        return x.includes(this.value);
-      });
-      document.querySelector(".project-list").innerHTML = renderProjectItems(
-        filtered
-      );
-    })
-  );
-}
 
+export function handleProjectFilter(data){
+  let buttons = document.querySelectorAll('.filter input[name="filter"]');
+  buttons.forEach(cond =>cond.addEventListener("change", function(event) {
+    let tag = event.target.value;  
+    if (tag === "all") {
+        document.querySelector(".project-list").innerHTML = renderProjectItems(data.projects);
+        console.log("all")
+      }
+      else {
+        const filtered = data.projects.filter(projects=>((projects.tags.toLowerCase()===(event.target.value.toLowerCase()) || (projects.tags.toLowerCase()===(event.target.value.toLowerCase())))));
+        const filtered2 = data.projects.filter(project=>(console.log(project.tags[0].toLowerCase())));
+
+        document.querySelector('.project-list').innerHTML = renderProjectItems(filtered);
+        console.log(filtered)
+        }
+    }));
+}
 
 export function renderProjectItems(projects) {
-  return projects
-    .map(
-      d => `
-      <div class="col-4">
-        <div class="project-title">
-          <a href="?project=${d.id}"><strong>${d.title}</strong></a>
+  return projects.map(d => `
+      <div>
+        <div>
+          <br /><br />
+          <span class="highlight">${d.title}</strong></a>
+          <div class="row-left tag">
+              <div class= "tag-1 col-2 center-text">
+              <br />
+                <a href=${d.link}>${d.projectpage}</a></li>
+              </div>
+              <br /><br />
+          </div>
+          <div class="mtop">
+              <img src="${d.photo}" class="app" height=500px>                        
+          </div>
         </div>
-        <div class="tag-flex-container tags">
-          ${renderTags(d)}
-        </div>
-        </br> 
-        <img src="${d.photo}" width="500px">
-        <br>
-        <p> "${d.description}" </p>  
-		</div>`
-    )
-    .join("\n");
+    </div>
+    `).join('');
 }
 
-
+/*
 export function renderTags(projects) {
     return projects.tags.map(d => `
     ${d}
     `).join('');
   }
+*/
